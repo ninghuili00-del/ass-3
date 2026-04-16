@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ikki Kobayashi Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260415-5" />
+  </head>
+  <body>
+    <main class="page">
+      <!-- Home navigation: top-right PROJECT / ABOUT / CONTACT links. -->
+      <header class="site-header" data-home-animate>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link is-active" href="#" data-nav-target="project">PROJECT</a>
+          <a class="nav-link" href="#" data-nav-target="about">ABOUT</a>
+          <a class="nav-link" href="#" data-nav-target="contact">CONTACT</a>
+        </nav>
+      </header>
+
+      <!-- Home page: welcome title, project cover stack, and bottom arrow. -->
+      <section class="hero" aria-label="Portfolio hero" data-home-animate>
+        <p class="eyebrow">HI, WELCOME</p>
+        <h1 class="hero-title">IKKI KOBAYASHI</h1>
+
+        <!-- Project covers: clicking the visible cover opens its detail page. -->
+        <div class="project-stack" aria-label="Project cover flow">
+          <section class="project-preview" data-step="1" aria-label="Forget Me Nots cover" data-open-detail="forget-me-nots">
+            <div class="project-preview__heading">
+              <p class="project-preview__title">FORGET ME NOTS</p>
+              <p class="project-preview__year">2020</p>
+            </div>
+
+            <div class="project-preview__poster-frame">
+              <img
+                class="project-preview__poster"
+                src="ikki-kobayashi-graphic-design-it.format-webp.width-2880_q6osOtjPRMwyKiIt.webp"
+                alt="Forget Me Nots poster"
+              />
+            </div>
+          </section>
+
+          <section class="project-preview" data-step="2" aria-label="Between Black and White cover" data-open-detail="between-black-and-white">
+            <div class="project-preview__heading">
+              <p class="project-preview__title">BETWEEN BLACK AND WHITE</p>
+              <p class="project-preview__year">2019</p>
+            </div>
+
+            <div class="project-preview__poster-frame">
+              <img
+                class="project-preview__poster"
+                src="https://www.figma.com/api/mcp/asset/e4aef62d-223e-425c-86f1-eb13a344eeb5"
+                alt="Between Black and White poster"
+              />
+            </div>
+          </section>
+
+          <section class="project-preview" data-step="3" aria-label="Experimental Graphic Prints cover" data-open-detail="experimental-graphic-prints">
+            <div class="project-preview__heading">
+              <p class="project-preview__title">EXPERIMENTAL GRAPHIC PRINTS</p>
+              <p class="project-preview__year">2017</p>
+            </div>
+
+            <div class="project-preview__poster-frame">
+              <img
+                class="project-preview__poster"
+                src="59e07e3a7fa44c45b8003bc9.format-webp.width-2880_ay1XG9z1q2JZvABV.webp"
+                alt="Experimental Graphic Prints poster"
+              />
+            </div>
+          </section>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <!-- Reusable project detail view. JavaScript fills gallery images and text. -->
+      <section class="project-detail" aria-label="Project detail view">
+        <header class="detail-header">
+          <button class="detail-back" type="button">BACK</button>
+
+          <nav class="detail-nav" aria-label="Project detail primary">
+            <a class="nav-link is-active" href="#" data-nav-target="project">PROJECT</a>
+            <a class="nav-link" href="#" data-nav-target="about">ABOUT</a>
+            <a class="nav-link" href="#" data-nav-target="contact">CONTACT</a>
+          </nav>
+        </header>
+
+        <!-- Detail gallery: rebuilt from the active project data in script.js. -->
+        <section class="detail-gallery" aria-label="Project image gallery">
+          <div class="detail-track">
+            <article class="detail-card" data-detail-index="0" aria-label="Gallery image 1">
+              <img
+                class="detail-card__image"
+                src=""
+                alt="Colorful abstract print"
+              />
+            </article>
+
+            <article class="detail-card" data-detail-index="1" aria-label="Gallery image 2">
+              <img
+                class="detail-card__image"
+                src=""
+                alt="Forgotten anything poster"
+              />
+            </article>
+
+            <article class="detail-card" data-detail-index="2" aria-label="Gallery image 3">
+              <img
+                class="detail-card__image"
+                src=""
+                alt="Forget Me Nots poster"
+              />
+            </article>
+
+            <article class="detail-card" data-detail-index="3" aria-label="Gallery image 4">
+              <img
+                class="detail-card__image"
+                src=""
+                alt="Smile smile smile poster"
+              />
+            </article>
+
+            <article class="detail-card" data-detail-index="4" aria-label="Gallery image 5">
+              <img
+                class="detail-card__image"
+                src=""
+                alt="Pink typographic poster"
+              />
+            </article>
+          </div>
+        </section>
+
+        <!-- Detail copy: year, title, and project description. -->
+        <section class="detail-copy" aria-label="Project information">
+          <p class="detail-year"></p>
+          <h2 class="detail-title"></h2>
+          <p class="detail-description"></p>
+        </section>
+      </section>
+
+      <!-- About page overlay. -->
+      <section class="about-view" aria-label="About view" aria-hidden="true">
+        <header class="about-header" data-about-animate>
+          <nav class="about-nav" aria-label="About primary">
+            <a class="nav-link" href="#" data-nav-target="project">PROJECT</a>
+            <a class="nav-link is-active" href="#" data-nav-target="about">ABOUT</a>
+            <a class="nav-link" href="#" data-nav-target="contact">CONTACT</a>
+          </nav>
+        </header>
+
+        <div class="about-name" data-about-animate>
+          <p class="about-name__line">IKKI</p>
+          <p class="about-name__line">KOBAYASHI</p>
+        </div>
+
+        <div class="about-portrait-frame" data-about-animate>
+          <img
+            class="about-portrait"
+            src="about.png"
+            alt="Portrait of Ikki Kobayashi"
+          />
+        </div>
+
+        <p class="about-description" data-about-animate>
+          Ikki Kobayashi is a Japan-based graphic designer known for his
+          experimental approach to typography and layout. His work often
+          deconstructs familiar visual systems, using distortion, repetition,
+          and contrast to create new forms of communication. Rather than
+          seeking clarity alone, his designs invite viewers to engage,
+          interpret, and question what they see.
+        </p>
+      </section>
+
+      <!-- Contact page overlay. -->
+      <section class="contact-view" aria-label="Contact view" aria-hidden="true">
+        <header class="contact-header" data-contact-animate>
+          <nav class="contact-nav" aria-label="Contact primary">
+            <a class="nav-link" href="#" data-nav-target="project">PROJECT</a>
+            <a class="nav-link" href="#" data-nav-target="about">ABOUT</a>
+            <a class="nav-link is-active" href="#" data-nav-target="contact">CONTACT</a>
+          </nav>
+        </header>
+
+        <h2 class="contact-title" data-contact-animate>CONTACT ME</h2>
+
+        <div class="contact-intro" data-contact-animate>
+          <p class="contact-intro__headline">Let's Work Together!</p>
+          <p class="contact-intro__body">
+            Exceptional outcomes begin with a strong alignment between client
+            and designer. Connect with me to see if we're a good fit.
+          </p>
+        </div>
+
+        <!-- Social icons are drawn with text/CSS instead of image files. -->
+        <div class="contact-socials" data-contact-animate aria-label="Social links">
+          <a class="contact-social contact-social--behance" href="#" aria-label="Behance">
+            Be
+          </a>
+          <a class="contact-social contact-social--instagram" href="#" aria-label="Instagram">
+            <span></span>
+          </a>
+          <a class="contact-social contact-social--facebook" href="#" aria-label="Facebook">
+            f
+          </a>
+        </div>
+
+        <p class="contact-touch-title" data-contact-animate>GET IN TOUCH</p>
+        <p class="contact-email" data-contact-animate>Ikkikobayashi@gmail.com</p>
+
+        <!-- Visual contact form; script.js prevents actual page submit. -->
+        <form class="contact-form" data-contact-animate>
+          <div class="contact-form__row">
+            <label class="contact-field contact-field--half">
+              <span class="contact-field__label">First Name</span>
+              <input class="contact-field__input" type="text" name="first-name" />
+            </label>
+
+            <label class="contact-field contact-field--half">
+              <span class="contact-field__label">Last Name</span>
+              <input class="contact-field__input" type="text" name="last-name" />
+            </label>
+          </div>
+
+          <label class="contact-field contact-field--full">
+            <span class="contact-field__label">Email</span>
+            <input class="contact-field__input" type="email" name="email" />
+          </label>
+
+          <label class="contact-field contact-field--message">
+            <span class="contact-field__label">Message</span>
+            <textarea class="contact-field__textarea" name="message"></textarea>
+          </label>
+
+          <button class="contact-submit" type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js?v=20260415-5"></script>
+  </body>
+</html>
